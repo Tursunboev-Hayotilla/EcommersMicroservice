@@ -35,6 +35,78 @@
       ],
       "UpstreamPathTemplate": "/api/Catalogs/",
       "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Catalogs/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7094
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Catalogs/",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Discount",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7067
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Discount/",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Discount",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7067
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Discount/",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Discount",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7067
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Discount/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Discount",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7067
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Discount/{id}",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Discount",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7067
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Discount/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
     }
   ],
   "GlobalConfiguration": {

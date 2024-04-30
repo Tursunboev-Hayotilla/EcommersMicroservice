@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Discount.Application.Abstractions
+namespace Discount.Application
 {
     public static class DiscountDependencyInjection
     {
@@ -17,4 +17,4 @@ namespace Discount.Application.Abstractions
             return services;
         }
     }
-}   
+}

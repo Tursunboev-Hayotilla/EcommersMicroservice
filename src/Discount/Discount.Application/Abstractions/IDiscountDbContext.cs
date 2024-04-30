@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Discount.Application.Abstractions
 {
-    public class IDiscountDbContext
+    public interface IDiscountDbContext
     {
         public DbSet<ProductDiscount> Discounts {  get; set; }
 

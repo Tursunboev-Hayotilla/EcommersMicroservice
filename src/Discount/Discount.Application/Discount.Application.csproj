@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Discount.Domain\Discount.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCases\" />
-  </ItemGroup>
-
 </Project>

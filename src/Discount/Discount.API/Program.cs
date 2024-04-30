@@ -1,6 +1,15 @@
+using Discount.Application;
+using Discount.Infractructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("_myAllowSpecificOrigins",
+        builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+});
+builder.Services.AddDiscountApplication();
+builder.Services.AddDIscountInfrastructure(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -16,6 +25,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("_myAllowSpecificOrigins");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

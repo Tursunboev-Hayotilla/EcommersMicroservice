@@ -1,5 +1,10 @@
+using Catalog.Application.Abstractions;
 using Catalog.Infrastructure.Persistance;
+using MediatR;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using Catalog.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +15,8 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddDbContext<CatalogDbContext>(options =>
                options.UseNpgsql(builder.Configuration.GetConnectionString("CatalogConnectionString")));
+builder.Services.AddScoped<ICatalogDbContext, CatalogDbContext>();
+builder.Services.AddApp();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

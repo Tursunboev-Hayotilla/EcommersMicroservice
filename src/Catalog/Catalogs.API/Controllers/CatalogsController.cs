@@ -13,7 +13,7 @@ namespace Catalogs.API.Controllers
     {
         private readonly IMediator _mediator;
 
-        public CatalogsController(ICatalogDbContext context, IMediator mediator)
+        public CatalogsController(IMediator mediator)
         {
             _mediator = mediator;
         }
